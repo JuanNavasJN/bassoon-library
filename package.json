@@ -1,0 +1,19 @@
+{
+  "name": "bassoonlibrary",
+  "version": "1.0.0",
+  "description": "Bassoon Library by Juan Navas",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JuanNavasJN/bassoon-library.git"
+  },
+  "author": "Juan Navas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JuanNavasJN/bassoon-library/issues"
+  },
+  "homepage": "https://github.com/JuanNavasJN/bassoon-library#readme"
+}
