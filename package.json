@@ -2,9 +2,10 @@
   "name": "bassoonlibrary",
   "version": "1.0.0",
   "description": "Bassoon Library by Juan Navas",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/JuanNavasJN/bassoon-library/issues"
   },
-  "homepage": "https://github.com/JuanNavasJN/bassoon-library#readme"
+  "homepage": "https://github.com/JuanNavasJN/bassoon-library#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
 }
