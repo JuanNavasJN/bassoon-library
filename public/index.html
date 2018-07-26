@@ -2,14 +2,14 @@
 <html>
 <head>
  <title>Bassoon Library</title> 
-
+ <link href="./styles.css" rel="stylesheet"> 
  <link href="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.min.css" rel="stylesheet"> 
   <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
-  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.js"></script>
   <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
- 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vuetify/1.1.8/vuetify.min.js"></script>
+
    <!-- Global site tag (gtag.js) - Google Analytics -->
    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122836822-1"></script>
    <script>
@@ -23,7 +23,13 @@
 </head>
 <body>
   <div id="app">
-    <v-app>
+    <div class="loading" v-if="mostrar">
+            <div class="loading-bar"></div>
+            <div class="loading-bar"></div>
+            <div class="loading-bar"></div>
+            <div class="loading-bar"></div>
+    </div>
+    <v-app v-cloak> 
         <v-content>
             <v-card>
                 <v-card class="indigo" dark>
@@ -66,10 +72,10 @@
  
   <script type="module"> 
     import { collection } from './collection.js';
-    
     var app = new Vue({ 
         el: '#app',
         data: {
+            mostrar: false,
             search: '',
             headers: [
             { text: 'Title', value: 'title' },
@@ -79,7 +85,6 @@
             parts: collection
         }
     });
-
   </script>
 </body>
 </html>
