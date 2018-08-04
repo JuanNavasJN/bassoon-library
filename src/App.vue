@@ -49,7 +49,6 @@ export default {
   name: 'app',
   data () {
     return {
-      mostrar: false,
       search: '',
       headers: [
       { text: 'Title', value: 'title' },
