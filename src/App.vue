@@ -63,5 +63,7 @@ export default {
 </script>
 
 <style>
-
+.loading {
+    display: none;
+}
 </style>
