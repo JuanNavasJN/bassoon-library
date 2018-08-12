@@ -20,8 +20,9 @@
                 :headers="headers"
                 :items="parts"
                 :search="search"
-                :rows-per-page-items="[10,25,100]"
+                hide-actions
                 >
+                <!-- :rows-per-page-items="[10,25,100]" -->
                 <template slot="items" slot-scope="props">
                     <td>{{ props.item.title }}</td>
                     <td>{{ props.item.composer }}</td>
