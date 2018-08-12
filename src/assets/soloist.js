@@ -1,4 +1,4 @@
-export const collection = [
+export const soloist = [
     // {
     //     "title": "",
     //     "composer": "",
@@ -202,4 +202,3 @@ export const collection = [
 ]
 
 export default {}
-    

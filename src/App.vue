@@ -20,7 +20,7 @@
                 :headers="headers"
                 :items="parts"
                 :search="search"
-                hide-actions
+                :rows-per-page-items="[10,25,100]"
                 >
                 <template slot="items" slot-scope="props">
                     <td>{{ props.item.title }}</td>
@@ -34,7 +34,9 @@
             </v-card>
           </v-content>
           <v-footer class="pa-3">
-                <div>Thanks <a href="http://fagotizm.narod.ru/index-eng.html" target="_blank">fagotizm.narod.ru</a></div>
+                <div>Thanks <a href="http://fagotizm.narod.ru/index-eng.html" target="_blank">fagotizm.narod.ru</a> ,
+                <a href="https://imslp.org/" target="_blank">imslp.org</a>
+                </div>
                 <v-spacer></v-spacer>
                 <div>&copy; {{ new Date().getFullYear() }}</div>
           </v-footer>
@@ -43,7 +45,8 @@
 </template>
 
 <script>
-import { collection } from './assets/collection.js';
+import { soloist } from './assets/soloist.js';
+import { methods } from './assets/methods.js';
 
 export default {
   name: 'app',
@@ -55,7 +58,7 @@ export default {
       { text: 'Composer', value: 'composer' },
       { text: 'Download', value: 'url', sortable: false, },
       ],
-      parts: collection
+      parts: soloist.concat(methods)
     }
   }
 }
